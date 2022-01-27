@@ -20,7 +20,6 @@ public class Main {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
         System.out.println("Enter client data:");
         System.out.print("Name: ");
@@ -58,13 +57,6 @@ public class Main {
 
         System.out.println();
         System.out.println("ORDER SUMARY:");
-        System.out.println("Order moment: "+sdf1.format(order.getMoment()));
-        System.out.println("Order status: "+order.getStatus());
-        System.out.println("Client: "+order.getClient());
-        System.out.println("Order Items: ");
-        for (OrderItem item : order.getItems()) {
-            System.out.println(item);
-        }
-        System.out.printf("Total price: %.2f", order.total());
+        System.out.println(order.toString());
     }
 }
